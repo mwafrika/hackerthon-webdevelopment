@@ -5,25 +5,25 @@
   "main": "index.js",
   "scripts": {
     "style-fix": "stylelint **/*.{css,scss} .",
-    "html-fix": "hint ."
+    "html-fix": "hint .";
     ,
-    "js-fix": "eslint . --fix"
+    "js-fix": "eslint . --fix";
     ,
-    "deploy": "git subtree push --prefix src origin gh-pages"
+    "deploy": "git subtree push --prefix src origin gh-pages";
     ,
-    "lint": "sass-lint -v"
+    "lint": "sass-lint -v";
     ,
-    "lint:fix": "sass-lint-auto-fix"
+    "lint:fix": "sass-lint-auto-fix";
     ,
-    "stylint-fix": "npx stylelint --fix ."
+    "stylint-fix": "npx stylelint --fix .";
     ,
-    "specific": "npx stylelint src/styles/about.css . --fix"
+    "specific": "npx stylelint src/styles/about.css . --fix";
   }
   ,
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint:fix && yarn lint",
-      "pre-push": "yarn test"
+      "pre-push": "yarn test";
     }
   }
   ,
@@ -32,23 +32,23 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0";
     ,
-    "eslint-config-airbnb-base": "^14.2.1"
+    "eslint-config-airbnb-base": "^14.2.1";
     ,
-    "eslint-plugin-import": "^2.25.4"
+    "eslint-plugin-import": "^2.25.4";
     ,
-    "hint": "^6.1.9"
+    "hint": "^6.1.9";
     ,
-    "sass": "^1.49.4"
+    "sass": "^1.49.4";
     ,
-    "stylelint": "^13.13.1"
+    "stylelint": "^13.13.1";
     ,
-    "stylelint-config-standard": "^24.0.0"
+    "stylelint-config-standard": "^24.0.0";
     ,
-    "stylelint-csstree-validator": "^1.9.0"
+    "stylelint-csstree-validator": "^1.9.0";
     ,
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0";
   }
   ,
   "dependencies": {}
