@@ -5,16 +5,11 @@
   "main": "index.js",
   "scripts": {
     "style-fix": "stylelint **/*.{css,scss} .",
-    "html-fix": "hint ."
-    ,
-    "js-fix": "eslint . --fix"
-    ,
-    "deploy": "git subtree push --prefix src origin gh-pages"
-    ,
-    "lint": "sass-lint -v"
-    ,
-    "lint:fix": "sass-lint-auto-fix"
-    ,
+    "html-fix": "hint .",
+    "js-fix": "eslint . --fix",
+    "deploy": "git subtree push --prefix src origin gh-pages",
+    "lint": "sass-lint -v",
+    "lint:fix": "sass-lint-auto-fix",
     "stylint-fix": "npx stylelint --fix ."
     ,
     "specific": "npx stylelint src/styles/about.css . --fix"
