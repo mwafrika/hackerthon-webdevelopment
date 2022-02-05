@@ -1,9 +1,9 @@
-@import url("https://fonts.cdnfonts.com/css/cocogoose");
-@import url("https://fonts.cdnfonts.com/css/Lato");
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+@import url('https://fonts.cdnfonts.com/css/Lato');
 
 body {
   box-sizing: border-box;
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
   font-size: 16px;
   height: 100vh;
   line-height: 1.5;
@@ -40,12 +40,8 @@ body main .partners-underline {
   width: 20%;
 }
 
-body {
-  font-family: "COCOGOOSE", sans-serif;
-}
-
 body header {
-  background-image: url("https://images.unsplash.com/photo-1544731612-de7f96afe55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=5000&q=60");
+  background-image: url('https://images.unsplash.com/photo-1544731612-de7f96afe55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=5000&q=60');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -176,12 +172,24 @@ body header .nav-container .navbar .navbar-container {
   }
 }
 
-body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-navbar-menu-list {
+body
+  header
+  .nav-container
+  .navbar
+  .navbar-container
+  .desk-navbar-menu
+  .desk-navbar-menu-list {
   list-style: none;
 }
 
 @media screen and (min-width: 768px) {
-  body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-navbar-menu-list {
+  body
+    header
+    .nav-container
+    .navbar
+    .navbar-container
+    .desk-navbar-menu
+    .desk-navbar-menu-list {
     list-style: none;
     display: flex;
     margin-left: 1rem;
@@ -189,20 +197,43 @@ body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-nav
   }
 }
 
-body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-navbar-menu-list .desk-navbar-menu-item {
+body
+  header
+  .nav-container
+  .navbar
+  .navbar-container
+  .desk-navbar-menu
+  .desk-navbar-menu-list
+  .desk-navbar-menu-item {
   list-style: none;
   display: flex;
 }
 
-body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-navbar-menu-list .desk-navbar-menu-item a {
+body
+  header
+  .nav-container
+  .navbar
+  .navbar-container
+  .desk-navbar-menu
+  .desk-navbar-menu-list
+  .desk-navbar-menu-item
+  a {
   color: rgb(0 0 0 / 40%);
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
   font-size: 0.8rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
-body header .nav-container .navbar .navbar-container .desk-navbar-menu .desk-navbar-menu-list .desk-navbar-menu-item a:hover {
+body
+  header
+  .nav-container
+  .navbar
+  .navbar-container
+  .desk-navbar-menu
+  .desk-navbar-menu-list
+  .desk-navbar-menu-item
+  a:hover {
   background: #d3d3d3;
   color: #272a31;
 }
@@ -258,7 +289,7 @@ body header .nav-container .navbar .showMenu {
 @media screen and (min-width: 0) {
   body header .nav-container .navbar .menu-list li a {
     color: rgb(0 0 0 / 40%);
-    font-family: "COCOGOOSE", sans-serif;
+    font-family: 'COCOGOOSE', sans-serif;
     font-size: 0.8rem;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -276,7 +307,7 @@ body header .nav-container .navbar .showMenu {
 
   body header .nav-container .navbar .campaign a {
     color: #ec5242;
-    font-family: "COCOGOOSE", sans-serif;
+    font-family: 'COCOGOOSE', sans-serif;
     font-size: 0.8rem;
     text-decoration: none;
   }
@@ -359,7 +390,7 @@ body header .banner {
 
 body header .banner h1 {
   font-size: 35px;
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
   color: #ec5242;
   font-weight: 500;
   line-height: 60px;
@@ -368,7 +399,7 @@ body header .banner h1 {
 body header .banner h3 {
   font-size: 40px;
   font-weight: 500;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 52px;
   color: #ec5242;
   margin-bottom: 0;
@@ -379,14 +410,14 @@ body header .banner h3 {
   body header .banner h1 {
     font-size: 1.5rem;
     font-size: 29px;
-    font-family: "COCOGOOSE", sans-serif;
+    font-family: 'COCOGOOSE', sans-serif;
     width: 92%;
   }
 
   body header .banner h3 {
     font-size: 35px;
     font-weight: 500;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 52px;
   }
 }
@@ -478,7 +509,7 @@ body header .banner h3 {
 
 body header .banner-description {
   border: 2px solid #fff;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   padding: 1rem;
   color: #272a31;
   font-style: normal;
@@ -489,13 +520,13 @@ body header .banner-program {
   font-size: 1.3rem;
   color: #272a31;
   font-weight: bold;
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
   margin-bottom: 0;
 }
 
 body header .banner-location {
   font-size: 1rem;
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
   color: #272a31;
   font-weight: bold;
   margin-top: 5px;
@@ -520,7 +551,7 @@ body main .program-container .program-item {
   background-color: rgb(245 245 245 / 20%);
   opacity: 1;
   color: #fff;
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 body main .program-container .program-item h3 {
@@ -529,7 +560,7 @@ body main .program-container .program-item h3 {
 
 body main .program-container .program-item p {
   font-weight: 300;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #fff;
 }
 
@@ -585,7 +616,6 @@ body main .program-container .program-btn:hover {
 
 @media screen and (min-width: 0) {
   body main .program {
-    flex-direction: column;
     flex-direction: column;
   }
 }
@@ -647,35 +677,55 @@ body main .featured-container .featured-item .featured-description {
 }
 
 body main .featured-container .featured-item .featured-description p {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #272a31;
   font-weight: bold;
   padding: 0 10px;
   margin: 5px 10px;
 }
 
-body main .featured-container .featured-item .featured-description .description-title {
-  font-family: "Lato", sans-serif;
+body
+  main
+  .featured-container
+  .featured-item
+  .featured-description
+  .description-title {
+  font-family: 'Lato', sans-serif;
   color: #272a31;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
-body main .featured-container .featured-item .featured-description .subdescription {
-  font-family: "Lato", sans-serif;
+body
+  main
+  .featured-container
+  .featured-item
+  .featured-description
+  .subdescription {
+  font-family: 'Lato', sans-serif;
   font-style: italic;
   color: #ec5242;
   font-size: 0.8rem;
 }
 
-body main .featured-container .featured-item .featured-description .description-body {
-  font-family: "Lato", sans-serif;
+body
+  main
+  .featured-container
+  .featured-item
+  .featured-description
+  .description-body {
+  font-family: 'Lato', sans-serif;
   color: #272a31;
   font-weight: bold;
   font-size: 0.8rem;
 }
 
-body main .featured-container .featured-item .featured-description .featured-separator {
+body
+  main
+  .featured-container
+  .featured-item
+  .featured-description
+  .featured-separator {
   border: 2px solid #d3d3d3;
   width: 5%;
   margin-left: 22px;
@@ -749,7 +799,7 @@ body main .partners {
 
 body main .partners h2 {
   color: #fff;
-  font-family: "Lato";
+  font-family: 'Lato, sans-serif';
   font-weight: bold;
   font-size: 2rem;
   margin: 20px;
@@ -862,7 +912,6 @@ body main footer .footer-container {
   flex-direction: row;
   justify-content: space-between;
   column-gap: 10px;
-  column-gap: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -894,7 +943,7 @@ body main footer .footer-container img {
 }
 
 body main footer .footer-container p {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #272a31;
   font-weight: bold;
   font-size: 1rem;

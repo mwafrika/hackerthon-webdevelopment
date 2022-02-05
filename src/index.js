@@ -65,7 +65,9 @@ fetch('../data.json', {
     const data = Object.values(cards);
     console.log(data);
     data.forEach((cardItem) => {
-      const { name, description, image, subdescription } = cardItem;
+      const {
+        name, description, image, subdescription,
+      } = cardItem;
 
       featuredContainer.innerHTML += `
          <div class="featured-item">
