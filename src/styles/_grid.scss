@@ -1,0 +1,74 @@
+@use "sass:math";
+
+$grid-columns: 12;
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.container-about {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100vw;
+  width: 100%;
+}
+// row
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// column
+
+@include xs {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xs {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include sm {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-sm {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include md {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-md {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include lg {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-lg {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}
+
+@include xl {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xl {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: calc($i * 100% / $grid-columns);
+    }
+  }
+}

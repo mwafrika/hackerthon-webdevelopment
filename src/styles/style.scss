@@ -1,0 +1,817 @@
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
+@import 'colors';
+@import 'mediaqueries';
+@import 'grid';
+@import 'utilities';
+
+body {
+  @extend %body;
+
+  font-family: 'COCOGOOSE', sans-serif;
+
+  header {
+    background-image: url('https://images.unsplash.com/photo-1544731612-de7f96afe55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=5000&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 38rem;
+
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      .social-nav {
+        display: flex;
+        justify-content: flex-end;
+        height: 30px;
+        width: 100%;
+        background-color: $black;
+
+        @include xs {
+          display: none;
+        }
+
+        @include md {
+          display: flex;
+        }
+
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding-right: 4%;
+
+          @include lg {
+            padding-right: 16%;
+          }
+
+          @include xl {
+            padding-right: 23.5%;
+          }
+
+          @include breakpoint(1440px) {
+            padding-right: 26%;
+          }
+
+          @include breakpoint(2560px) {
+            padding-right: 35%;
+          }
+
+          li {
+            margin-left: 1rem;
+            list-style: none;
+
+            a {
+              color: $white;
+              font-size: 0.8rem;
+              text-decoration: none;
+
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+        }
+      }
+
+      .navbar {
+        @extend %flex-center;
+
+        width: 100%;
+        height: 80px;
+        background-color: $white;
+        column-gap: 30px;
+
+        .menu-list {
+          position: fixed;
+          transform: translateY(-100%);
+          transition: transform 0.2s;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 99;
+          background: rgba($color: $black, $alpha: 0.7);
+          opacity: 0.9;
+          list-style: none;
+          padding-top: 4rem;
+          margin: 0;
+
+          .navbar-menu-item {
+            padding: 1rem 1rem 1rem 4rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            a {
+              color: $white;
+              text-decoration: none;
+
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+        }
+        // desktop menu
+        .navbar-container {
+          display: none;
+
+          @include md {
+            display: inline-block;
+          }
+
+          .desk-navbar-menu {
+            .desk-navbar-menu-list {
+              list-style: none;
+
+              @include md {
+                list-style: none;
+                display: flex;
+                margin-left: 1rem;
+                margin-right: 0.5rem;
+              }
+
+              .desk-navbar-menu-item {
+                list-style: none;
+                display: flex;
+
+                a {
+                  color: rgba(0, 0, 0, 0.4);
+                  font-family: 'COCOGOOSE', sans-serif;
+                  font-size: 0.8rem;
+                  text-decoration: none;
+                  padding: 0.5rem 1rem;
+
+                  &:hover {
+                    background: $gray;
+                    color: $black;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .mobile {
+          display: none;
+          position: fixed;
+          z-index: 100;
+          top: 1rem;
+          left: 0.3rem;
+          padding: 4px;
+          cursor: pointer;
+
+          .close {
+            display: none;
+            color: $white;
+            font-size: 1.5rem;
+          }
+
+          @include xs {
+            display: flex;
+          }
+        }
+
+        .showMenu {
+          transform: translateY(0);
+        }
+
+        @include xs {
+          justify-content: flex-start;
+
+          .menu-list {
+            @include md {
+              list-style: none;
+              display: flex;
+              margin-left: 1rem;
+              margin-right: 0.5rem;
+
+              @include xl {
+                margin-left: 4rem;
+                margin-right: 2rem;
+              }
+            }
+
+            li {
+              a {
+                color: rgba(0, 0, 0, 0.4);
+                font-family: 'COCOGOOSE', sans-serif;
+                font-size: 0.8rem;
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+
+                &:hover {
+                  background: $gray;
+                  color: $black;
+                }
+              }
+            }
+          }
+
+          .campaign {
+            padding: 0.5rem 1rem;
+            border: 1px solid $red;
+
+            a {
+              color: $red;
+              font-family: 'COCOGOOSE', sans-serif;
+              font-size: 0.8rem;
+              text-decoration: none;
+            }
+
+            &:hover {
+              background: $red;
+
+              a {
+                color: $white;
+              }
+            }
+
+            @include xs {
+              display: none;
+            }
+
+            @include md {
+              display: flex;
+            }
+          }
+
+          @include md {
+            justify-content: center;
+          }
+
+          .menuIcon {
+            color: $black;
+            font-size: 2rem;
+
+            &:hover {
+              color: $black;
+              cursor: pointer;
+            }
+
+            @include md {
+              display: none;
+            }
+          }
+        }
+
+        .logo-header {
+          display: flex;
+
+          @include xs {
+            display: none;
+          }
+
+          @include md {
+            display: flex;
+          }
+
+          img {
+            width: 100%;
+            height: 60px;
+          }
+        }
+      }
+    }
+
+    .banner {
+      margin: 0 auto;
+      padding-top: 113px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 35px;
+        font-family: 'COCOGOOSE', sans-serif;
+        color: $red;
+        font-weight: 500;
+        line-height: 60px;
+      }
+
+      h3 {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: 'Lato', sans-serif;
+        line-height: 52px;
+        color: $red;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      @include xs {
+        h1 {
+          font-size: 1.5rem;
+          font-size: 29px;
+          font-family: 'COCOGOOSE', sans-serif;
+          width: 92%;
+        }
+
+        h3 {
+          font-size: 35px;
+          font-weight: 500;
+          font-family: 'Lato', sans-serif;
+          line-height: 52px;
+        }
+      }
+
+      @include md {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 140px;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 40px;
+        }
+      }
+
+      @include lg {
+        width: 70%;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 42px;
+        }
+      }
+
+      @include xl {
+        width: 70%;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 3rem;
+        }
+
+        .banner-description {
+          width: 40%;
+        }
+      }
+
+      @include breakpoint(1440px) {
+        width: 65%;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        h3 {
+          font-size: 4rem;
+        }
+      }
+
+      @include breakpoint(2560px) {
+        width: 70%;
+        padding-top: 120px;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        .banner-description {
+          width: 40%;
+        }
+      }
+
+      &-description {
+        border: 2px solid $white;
+        font-family: 'Lato', sans-serif;
+        padding: 1rem;
+        color: $black;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      &-program {
+        font-size: 1.3rem;
+        color: $black;
+        font-weight: bold;
+        font-family: 'COCOGOOSE', sans-serif;
+        margin-bottom: 0;
+      }
+
+      &-location {
+        font-size: 1rem;
+        font-family: 'COCOGOOSE', sans-serif;
+        color: $black;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  main {
+    .program {
+      @extend %flex-center;
+
+      background-color: $black;
+      color: $white;
+      font-weight: bold;
+
+      &-underline {
+        @extend %underline;
+      }
+
+      &-container {
+        @extend %flex-center;
+
+        flex-direction: column;
+        margin: 25px 8px;
+        row-gap: 15px;
+
+        .program-item {
+          @extend %flex-center;
+
+          flex-direction: row;
+          column-gap: 20px;
+          padding: 0 10px;
+          background-color: rgba(245, 245, 245, 0.2);
+          opacity: 1;
+          color: $white;
+          font-family: 'COCOGOOSE', sans-serif;
+
+          h3 {
+            color: $red;
+          }
+
+          p {
+            font-weight: 300;
+            font-family: 'Lato', sans-serif;
+            color: $white;
+          }
+
+          @include lg {
+            width: 9rem;
+            flex-direction: column;
+            column-gap: 10px;
+          }
+
+          @include breakpoint(1440px) {
+            width: 12rem;
+          }
+        }
+
+        .program-btn {
+          @extend %flex-center;
+
+          padding: 10px 20px;
+          background-color: $red;
+          color: $white;
+          font-weight: bold;
+          border: 0;
+          font-size: 1rem;
+          position: relative;
+
+          &:hover {
+            background-color: $gray;
+            color: $black;
+            cursor: pointer;
+          }
+
+          @include xs {
+            .program-btn {
+              display: block;
+            }
+          }
+        }
+
+        @include lg {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          column-gap: 15px;
+
+          .program-btn {
+            display: none;
+          }
+        }
+      }
+
+      @include xs {
+        flex-direction: column;
+      }
+    }
+
+    .program-link {
+      display: none;
+    }
+
+    @include lg {
+      .program-link {
+        display: block;
+        color: $gray;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 2rem 1rem;
+
+        &:hover {
+          color: $red;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .featured {
+      @extend %flex-center;
+
+      flex-direction: column;
+
+      &-underline {
+        @extend %underline;
+      }
+
+      .showMore {
+        display: none;
+      }
+
+      .showMoreb { display: flex; }
+
+      &-container {
+        @extend %flex-center;
+
+        flex-direction: column;
+        margin: 25px 8px;
+        row-gap: 15px;
+
+        @include lg {
+          margin: 10px 8%;
+        }
+
+        .featured-item {
+          @extend %flex-center;
+
+          .featured-img {
+            width: 40%;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .featured-description {
+            width: auto;
+
+            p {
+              font-family: 'Lato', sans-serif;
+              color: $black;
+              font-weight: bold;
+              padding: 0 10px;
+              margin: 5px 10px;
+            }
+
+            .description-title {
+              font-family: 'Lato', sans-serif;
+              color: $black;
+              font-weight: bold;
+              font-size: 1.3rem;
+            }
+
+            .subdescription {
+              font-family: 'Lato', sans-serif;
+              font-style: italic;
+              color: $red;
+              font-size: 0.8rem;
+            }
+
+            .description-body {
+              font-family: 'Lato', sans-serif;
+              color: $black;
+              font-weight: bold;
+              font-size: 0.8rem;
+            }
+
+            .featured-separator {
+              border: 2px solid #d3d3d3;
+              width: 5%;
+              margin-left: 22px;
+            }
+          }
+        }
+
+        .btn-more {
+          @extend %flex-center;
+
+          padding: 10px 20px;
+          background-color: $white;
+          border: 2px solid $gray;
+          color: $black;
+          font-weight: bold;
+          width: 50%;
+          column-gap: 10px;
+          font-size: 1rem;
+          position: relative;
+
+          &:hover {
+            background-color: $red;
+            color: $white;
+            cursor: pointer;
+            border: 2px solid $red;
+
+            .chevron {
+              transform: rotate(180deg);
+              color: $white;
+            }
+          }
+
+          @include md {
+            width: 30%;
+          }
+
+          .chevron {
+            @extend %flex-center;
+
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            color: $red;
+
+            &:hover {
+              color: $white;
+              cursor: pointer;
+            }
+          }
+
+          @include lg {
+            display: none;
+          }
+        }
+
+        @include lg {
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          .featured-item {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    .partners {
+      @extend %flex-center;
+
+      flex-direction: column;
+      background-color: rgba($color: $black, $alpha: 0.9);
+      width: 100%;
+      height: 15rem;
+
+      h2 {
+        color: $white;
+        font-family: 'Lato';
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 20px;
+        padding: 0;
+
+        @include breakpoint(2560px) {
+          font-size: 3rem;
+        }
+      }
+
+      &-underline {
+        @extend %underline;
+
+        @include md {
+          width: 10%;
+        }
+
+        @include lg {
+          width: 7%;
+        }
+
+        @include xl {
+          width: 6%;
+        }
+
+        @include breakpoint(2560px) {
+          width: 3%;
+        }
+      }
+
+      &-logo {
+        @extend %flex-center;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        column-gap: 10px;
+        margin: 25px 8px;
+        row-gap: 20px;
+
+        @include md {
+          margin: 50px 16px;
+          column-gap: 30px;
+        }
+
+        @include lg {
+          margin: 50px 16px;
+          column-gap: 30px;
+        }
+
+        @include xl {
+          margin: 50px 32px;
+          column-gap: 30px;
+        }
+
+        @include breakpoint(2560px) {
+          margin: 42px 32px;
+          column-gap: 30px;
+        }
+
+        img {
+          @include xs {
+            width: 30%;
+            height: 30px;
+          }
+
+          @include md {
+            width: 20%;
+            height: 30px;
+          }
+
+          @include xl {
+            width: 15%;
+            height: 30px;
+          }
+
+          @include breakpoint(2560px) {
+            width: 10%;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    footer {
+      @extend %flex-center;
+
+      flex-direction: row;
+      width: 100%;
+
+      .footer-container {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include md {
+          width: 80%;
+          column-gap: 30px;
+        }
+
+        @include lg {
+          width: 70%;
+          column-gap: 30px;
+        }
+
+        @include xl {
+          width: 56%;
+          column-gap: 30px;
+        }
+
+        img {
+          width: 50%;
+          height: 5rem;
+        }
+
+        p {
+          font-family: 'Lato', sans-serif;
+          color: $black;
+          font-weight: bold;
+          font-size: 1rem;
+          padding: 0;
+          margin: 0;
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

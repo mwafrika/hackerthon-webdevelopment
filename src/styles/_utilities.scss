@@ -1,0 +1,25 @@
+%body {
+  box-sizing: border-box;
+  font-family: 'COCOGOOSE', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100vw;
+  padding: 0;
+  width: 100%;
+  // background-color: $gray;
+}
+
+%flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+%underline {
+  background-color: $red;
+  height: 2px;
+  margin: 0 auto;
+  width: 20%;
+}
