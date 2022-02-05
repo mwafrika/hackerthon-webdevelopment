@@ -6,7 +6,7 @@
 
 > This is the very capstone project at Microverse that initiate students on how to apply the skills to build a real world project
 
-### [LIVE LINK](https://mwafrika.github.io/Capstone-project-microverse/)
+### [LIVE LINK](https://mwafrika.github.io/Capstone-project-microverse)
 
 This is the live demo of the portfolio project by using mobile first approach for the responsive web design.
 
