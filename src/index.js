@@ -1,26 +1,3 @@
-const closeBtn = document.querySelector('.close');
-const hambuger = document.querySelector('.menuIcon');
-const btnContainer = document.querySelector('.mobile');
-const menuItemList = document.querySelector('.menu-list');
-const item = document.querySelectorAll('.navbar-menu-item');
-
-function toggleHamburger() {
-  if (menuItemList.classList.contains('showMenu')) {
-    menuItemList.classList.remove('showMenu');
-    closeBtn.style.display = 'none';
-    hambuger.style.display = 'block';
-  } else {
-    menuItemList.classList.add('showMenu');
-    closeBtn.style.display = 'block';
-    hambuger.style.display = 'none';
-  }
-}
-
-btnContainer.addEventListener('click', toggleHamburger);
-
-item.forEach((item) => {
-  item.addEventListener('click', toggleHamburger);
-});
 const title = document.createElement('h2');
 const underLine = document.createElement('div');
 const featuredContainer = document.createElement('div');
@@ -86,7 +63,7 @@ fetch('../data.json', {
   .then((response) => response.json())
   .then((cards) => {
     const data = Object.values(cards);
-
+    console.log(data);
     data.forEach((cardItem) => {
       const { name, description, image, subdescription } = cardItem;
 
