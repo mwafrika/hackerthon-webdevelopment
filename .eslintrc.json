@@ -16,7 +16,14 @@
       "eol-last": "off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
-      }]
+      }],
+      "prettier/prettier": [
+        "warn",
+        {
+          "singleQuote": true,
+          "semi": true
+        }
+      ]
     },
     "ignorePatterns": [
       "dist/",
