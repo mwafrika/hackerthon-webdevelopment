@@ -29,6 +29,7 @@ body {
   max-width: 100vw;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body header .nav-container .navbar,
@@ -142,19 +143,20 @@ body header .nav-container .navbar {
 }
 
 body header .nav-container .navbar .menu-list {
-  background: rgb(39 42 49 / 70%);
-  bottom: 0;
-  left: 0;
-  list-style: none;
-  margin: 0;
-  opacity: 0.9;
-  padding-top: 4rem;
   position: fixed;
-  right: 0;
-  top: 0;
   transform: translateY(-100%);
   transition: transform 0.2s, -webkit-transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 99;
+  background: black;
+
+  /* opacity: 0.9597; */
+  list-style: none;
+  padding-top: 4rem;
+  margin: 0;
 }
 
 body header .nav-container .navbar .menu-list .navbar-menu-item {

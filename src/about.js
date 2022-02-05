@@ -9,6 +9,7 @@ function toggleHamburger() {
     menuItemList.classList.remove('showMenu');
     closeBtn.style.display = 'none';
     hambuger.style.display = 'block';
+    document.body.style.overflow = 'hidden';
   } else {
     menuItemList.classList.add('showMenu');
     closeBtn.style.display = 'block';
