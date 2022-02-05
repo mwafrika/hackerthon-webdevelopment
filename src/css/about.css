@@ -238,6 +238,12 @@ body header .nav-container .navbar .mobile .close {
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 1024px) and (min-width: 1440px) {
+  body header .nav-container .navbar .mobile {
+    display: none;
+  }
+}
+
 body header .nav-container .navbar .showMenu {
   transform: translateY(0);
 }
@@ -252,15 +258,17 @@ body header .nav-container .navbar .showMenu {
   body header .nav-container .navbar .menu-list {
     display: flex;
     list-style: none;
-    margin-left: 1rem;
-    margin-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-@media screen and (min-width: 0) and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 0) and (min-width: 768px) and (min-width: 1024px) and (min-width: 1440px) {
   body header .nav-container .navbar .menu-list {
-    margin-left: 4rem;
-    margin-right: 2rem;
+    list-style: none;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

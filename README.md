@@ -76,7 +76,8 @@ npx eslint .
 
 ## Acknowledgments
 
-- Thanks to Cindy Shin whose design of cc global summit 2015 was used.
+- Thanks to Cindy Shin whose design of cc global summit 2015 was used [Cindy Shin](https://www.behance.net/adagio07).
+- This is the link to the original design [Design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
 
 ## License
 
