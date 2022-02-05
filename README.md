@@ -6,6 +6,10 @@ This project is to help demostrating or put into practice what we have learned a
 
 ## Built With
 
+![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1644090063/Cars%20Images%20project/hackaton_qbnjac.png)
+
+## Built With
+
 - Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
 - Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
 - Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
