@@ -1,37 +1,18 @@
-const closeBtn = document.querySelector('.close');
-const hambuger = document.querySelector('.menuIcon');
-const btnContainer = document.querySelector('.mobile');
-const menuItemList = document.querySelector('.menu-list');
-const item = document.querySelectorAll('.navbar-menu-item');
+const title = document.createElement('h2');
+const underLine = document.createElement('div');
+const featuredContainer = document.createElement('div');
+const showHide = document.createElement('div');
 
-function toggleHamburger() {
-  if (menuItemList.classList.contains('showMenu')) {
-    menuItemList.classList.remove('showMenu');
-    closeBtn.style.display = 'none';
-    hambuger.style.display = 'block';
-  } else {
-    menuItemList.classList.add('showMenu');
-    closeBtn.style.display = 'block';
-    hambuger.style.display = 'none';
-  }
-}
+const container = document.getElementById('container');
 
-btnContainer.addEventListener('click', toggleHamburger);
+// const contain = document.createElement('div');
+// contain.classList.add('container');
 
-item.forEach((item) => {
-  item.addEventListener('click', toggleHamburger);
-});
-
-const container = document.querySelector('.container');
 const featuredSection = document.createElement('section');
 featuredSection.classList.add('featured');
 
 container.appendChild(featuredSection);
 container.insertBefore(featuredSection, container.children[1]);
-const title = document.createElement('h2');
-const underLine = document.createElement('div');
-const featuredContainer = document.createElement('div');
-const showHide = document.createElement('div');
 
 // next
 const btn = document.createElement('button');
@@ -49,11 +30,6 @@ btn.appendChild(span2);
 btn.classList.add('btn-more');
 span.innerHTML = 'More';
 
-showHide.classList.add('showMore');
-
-underLine.classList.add('featured-underline');
-featuredContainer.classList.add('featured-container');
-
 function next(elem) {
   do {
     elem = elem.nextElementSibling;
@@ -62,22 +38,23 @@ function next(elem) {
   return elem;
 }
 
-if (window.innerWidth < 768) {
-  btn.addEventListener('click', () => {
-    const hide = document.querySelector('.showMore');
-    let nextElem = next(hide);
-
-    if (nextElem) {
-      while (nextElem) {
-        nextElem.classList.toggle('showMore');
-        nextElem = next(nextElem);
-      }
-      btn.style.display = 'flex';
+// if (window.innerWidth < 768) {
+btn.addEventListener('click', (e) => {
+  console.log(e, 'clicked');
+  const hide = document.querySelector('.showMore');
+  let nextElem = next(hide);
+  console.log(nextElem);
+  if (nextElem) {
+    while (nextElem) {
+      nextElem.classList.toggle('showMore');
+      nextElem = next(nextElem);
     }
-  });
-}
+    btn.style.display = 'flex';
+  }
+});
+// }
 
-fetch('data.json', {
+fetch('../data.json', {
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -86,9 +63,11 @@ fetch('data.json', {
   .then((response) => response.json())
   .then((cards) => {
     const data = Object.values(cards);
-
+    console.log(data);
     data.forEach((cardItem) => {
-      const { name, description, image, subdescription } = cardItem;
+      const {
+        name, description, image, subdescription,
+      } = cardItem;
 
       featuredContainer.innerHTML += `
          <div class="featured-item">
@@ -115,13 +94,17 @@ fetch('data.json', {
     });
   })
   .then(() => {
+    showHide.classList.add('showMore');
+
+    underLine.classList.add('featured-underline');
+    featuredContainer.classList.add('featured-container');
+
     title.innerHTML = 'Featured speakers';
     featuredSection.appendChild(title);
     featuredSection.appendChild(underLine);
     featuredSection.appendChild(featuredContainer);
     featuredContainer.appendChild(btn);
     featuredContainer.insertBefore(showHide, featuredContainer.children[2]);
-    console.log('result', featuredContainer.children);
 
     if (window.innerWidth < 768) {
       if (featuredContainer.children.length > 2) {

@@ -1,59 +1,88 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Capastone Project for the Html,CSS,Javascipt module
 
-# Basic portofolio project
+> This is is the project for my the first capstone at Microverse
 
-### This is the live demo of the Hackerthon project by using mobile first approach for the responsive web design.
-
-> This is the very capstone project at Microverse that initiate students on how to apply the skills to build a real world project
-
-### [LIVE LINK](https://mwafrika.github.io/Capstone-project-microverse/)
-
-This is the live demo of the portfolio project by using mobile first approach for the responsive web design.
-
-![screenshot]()
+This project is to help demostrating or put into practice what we have learned at Microverse for the time we spent at Microverse program until now. Please have a look at my Live site and give me feedback [Live Demo](https://mwafrika.github.io/Capstone-project-v2/index.html). 🙂
 
 ## Built With
 
-- HTML and CSS
+![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1644090063/Cars%20Images%20project/hackaton_qbnjac.png)
 
-## Getting Started
+## Built With
 
-**In this project, students at Microverse will get familiar with CSS, HTML, git/github/github flow and linting**
+- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
+- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
+- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps
 
 ### Prerequisites
 
-#### Have nodejs an npm installed locally
+The basic requirements for building the executable are:
 
-### Setup
+- A working browser application (Google chrome, Mozilla Fire fox, Microsoft edge ...)
+- VSCode or any other equivalent code editor
+- Node Package Manager (For running, debuging, or installing dependancies to be used)
 
-#### To get the copy of this project, please go ahead and follow the steps below:
+# Getting Started
 
-- Open your terminal
-- clone the project from the source repository by running run: `git clone https://github.com/mwafrika/portfolio-microverse.git`
-- Open the index.html file in the browser or use the live server extension for vscode.
+#### Cloning the project
 
-#### Next step is to open the cloned repository and run the following command to install the project dependencies locally `npm install` in
+```
+git clone  https://github.com/mwafrika/Capstone-project-v2 <Your-Build-Directory>
+```
 
-## Authors
+## Getting packages and debuging with Stylelint
 
-👤 **Author**
+```
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
 
-- GitHub: [@github](https://github.com/mwafrika)
-- Twitter: [@twitter](https://twitter.com/mwafrikamufung1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mwafrika-mufungizi)
+##### For validation detection using Stylelint Run
 
-## Show your support
+```
+npx stylelint "**/*.{css,scss}"
+```
 
-Give a ⭐️ if you like this project!
+##### from parent source directory
+
+## Getting packages and debuging with Webhint
+
+```
+npm init -y
+npm install --save-dev hint@6.x
+```
+
+##### For validation detection using Webhint Run
+
+```
+npx hint .
+```
+
+## Getting packages and debuging with Eslint
+
+```
+npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+
+```
+
+##### For validation detection using Eslint Run
+
+```
+
+npx eslint .
+
+```
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to Cindy Shin whose design of cc global summit 2015 was used.
 
-## 📝 License
+## License
 
-This project is [MIT](./MIT.md) licensed.
+All source code files are licensed under the permissive MIT license
+(https://opensource.org/licenses/MIT) unless marked differently in a particular folder/file.
+
+## Author
+
+- **Mwafrika Josué** - [github](https://github.com/mwafrika), [twitter](https://twitter.com/mwafrikamufung1), [linkedin](https://www.linkedin.com/in/mwafrika-mufungizi/)

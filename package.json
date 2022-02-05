@@ -17,7 +17,7 @@
     ,
     "stylint-fix": "npx stylelint --fix ."
     ,
-    "specific":"npx stylelint src/styles/about.css . --fix"
+    "specific": "npx stylelint src/styles/about.css . --fix"
   }
   ,
   "husky": {
