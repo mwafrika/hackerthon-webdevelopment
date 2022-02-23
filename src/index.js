@@ -54,7 +54,7 @@ btn.addEventListener('click', (e) => {
 });
 // }
 
-fetch('../data.json', {
+fetch('https://api.jsonbin.io/b/621603041b38ee4b33cac0ea', {
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
