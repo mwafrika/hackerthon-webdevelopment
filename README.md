@@ -4,9 +4,20 @@
 
 This project is to help demostrating or put into practice what we have learned at Microverse for the time we spent at Microverse program until now. Please have a look at my Live site and give me feedback [Live Demo](https://mwafrika.github.io/Capstone-hackerthon-webdevelopment/). 🙂
 
-## Built With
+## Home page
 
-![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1644090063/Cars%20Images%20project/hackaton_qbnjac.png)
+![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1645613283/MICROVERSE/capstone-project-html-css-javascript/speakers/home_yidzgw.png)
+
+
+## Featured speakers section
+
+![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1645612780/MICROVERSE/capstone-project-html-css-javascript/speakers/featuredSpeakers_cbeuee.png)
+
+
+## Partners section
+
+![Screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1645612951/MICROVERSE/capstone-project-html-css-javascript/speakers/partners_hsnzzj.png)
+
 
 ## Built With
 
