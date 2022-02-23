@@ -2,7 +2,7 @@
 
 > This is is the project for my the first capstone at Microverse
 
-This project is to help demostrating or put into practice what we have learned at Microverse for the time we spent at Microverse program until now. Please have a look at my Live site and give me feedback [Live Demo](https://mwafrika.github.io/Capstone-project-v2/index.html). 🙂
+This project is to help demostrating or put into practice what we have learned at Microverse for the time we spent at Microverse program until now. Please have a look at my Live site and give me feedback [Live Demo](https://mwafrika.github.io/Capstone-hackerthon-webdevelopment/). 🙂
 
 ## Built With
 
